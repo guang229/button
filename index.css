@@ -1,1 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Bitcount+Single:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body {
+  text-align: center;
+}
+
+.color-change-button {
+  display: block;
+  margin: 0 auto;
+}
+
 
