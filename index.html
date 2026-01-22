@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+</head>
+<body>
+    <main class="color-changer-container">
+        <section class="color-changer-section">
+            <h1 class="color-changer-title">Background Color Generator</h1>
+            <button class="color-change-button" type="button">Change Background Color</button>
+            <p class="current-color-display">Current Color: <span class="color-value">#FFFFFF</span></p>
+        </section>
+    </main>
+
+    <script>
+        class BackgroundColorChanger {
+            constructor() {
+                this.colorButton = document.querySelector('.color-change-button');
+                this.colorValueDisplay = document.querySelector('.color-value');
+                this.initializeEventListener();
+            }
+
+            generateRandomColor() {
+                const randomHex = Math.floor(Math.random() * 16777215).toString(16);
+                return '#' + randomHex.toUpperCase().padStart(6, '0');
+            }
+
+            changeBackgroundColor() {
+                const newColor = this.generateRandomColor();
+                document.body.style.backgroundColor = newColor;
+                this.colorValueDisplay.textContent = newColor;
+            }
+
+            initializeEventListener() {
+                this.colorButton.addEventListener('click', () => this.changeBackgroundColor());
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new BackgroundColorChanger();
+        });
+    </script>
+</body>
+</html>
